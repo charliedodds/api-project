@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+.api {
+  margin: 1rem;
+}
+
+.api__stats {
+  display: flex;
+  justify-content: space-between;
+}
 
 /*# sourceMappingURL=index.css.map */

@@ -8,7 +8,56 @@
 		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
-		<h1>API Project</h1>
+		<header>
+			<h1>API Project</h1>
+			<figure>
+				<img src="xzibit.jpeg" alt="xzibit" />
+			</figure>
+		</header>
+		<form class="api-form">
+			<section class="api-form__input-wrapper">
+				<label for="title">Title</label>
+				<input type="text" id="title" />
+			</section>
+			<section class="api-form__input-wrapper">
+				<label for="description">Description</label>
+				<input type="text" id="description" />
+			</section>
+			<section class="api-form__input-wrapper">
+				<label for="category">Category</label>
+				<input type="text" id="category" />
+			</section>
+			<fieldset>
+				<legend>Auth</legend>
+				<label for="noAuth">None</label>
+				<input type="radio" name="auth" id="noAuth" value="null" />
+				<label for="apiKey">API key</label>
+				<input type="radio" name="auth" id="apiKey" value="apiKey" />
+				<label for="0Auth">0Auth</label>
+				<input type="radio" name="auth" id="0Auth" value="0Auth" />
+				<label for="X-Mashape-Key">X-Mashape-Key</label>
+				<input type="radio" name="auth" id="X-Mashape-Key" value="X-Mashape-Key" />
+			</fieldset>
+			<fieldset>
+				<legend>HTTPS support</legend>
+				<label for="noHTTPS">No</label>
+				<input type="radio" name="https" id="noHTTPS" value="false" />
+				<label for="yesHTTPS">Yes</label>
+				<input type="radio" name="https" id="yesHTTPS" value="true" />
+			</fieldset>
+			<fieldset>
+				<legend>CORS support</legend>
+				<label for="yesCORS">Yes</label>
+				<input type="radio" name="cors" id="yesCORS" value="yes" />
+				<label for="noCORS">No</label>
+				<input type="radio" name="cors" id="noCORS" value="no" />
+				<label for="unknownCORS">Unknown</label>
+				<input type="radio" name="cors" id="unknownCORS" value="unknown" />
+			</fieldset>
+			<button class="api-form__button" type="submit">Search</button>
+			<button class="api-form__button" type="button" id="randomBtn">Random</button>
+		</form>
+		<section class="api-output-container"></section>
 		<script src="index.js"></script>
 	</body>
 </html>
