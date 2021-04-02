@@ -25,34 +25,81 @@
 			</section>
 			<section class="api-form__input-wrapper">
 				<label for="category">Category</label>
-				<input type="text" id="category" />
+				<select name="category" id="category">
+					<option value="" selected></option>
+					<option value="animals">Animals</option>
+					<option value="anime">Anime</option>
+					<option value="anti-malware">Anti-Malware</option>
+					<option value="art">Art & Design</option>
+					<option value="books">Books</option>
+					<option value="business">Business</option>
+					<option value="calendar">Calendar</option>
+					<option value="cloud">Cloud Storage & File Sharing</option>
+					<option value="continuous">Continuous Integration</option>
+					<option value="cryptocurrency">Cryptocurrency</option>
+					<option value="currency">Currency Exchange</option>
+					<option value="data">Data Validation</option>
+					<option value="development">Development</option>
+					<option value="dictionaries">Dictionaries</option>
+					<option value="documents">Documents & Productivity</option>
+					<option value="environment">Environment</option>
+					<option value="events">Events</option>
+					<option value="finance">Finance</option>
+					<option value="food">Food & Drink</option>
+					<option value="games">Games & Comics</option>
+					<option value="geocoding">Geocoding</option>
+					<option value="government">Government</option>
+					<option value="health">Health</option>
+					<option value="jobs">Jobs</option>
+					<option value="machine">Machine Learning</option>
+					<option value="music">Music</option>
+					<option value="news">News</option>
+					<option value="open">Open Data & Open Source Projects</option>
+					<option value="patent">Patent</option>
+					<option value="personality">Personality</option>
+					<option value="phone">Phone</option>
+					<option value="photography">Photography</option>
+					<option value="science">Science & Math</option>
+					<option value="security">Security</option>
+					<option value="shopping">Shopping</option>
+					<option value="social">Social</option>
+					<option value="sports">Sports & Fitness</option>
+					<option value="test">Test Data</option>
+					<option value="text">Text Analysis</option>
+					<option value="tracking">Tracking</option>
+					<option value="transportation">Transportation</option>
+					<option value="url">URL Shorteners</option>
+					<option value="vehicle">Vehicle</option>
+					<option value="video">Video</option>
+					<option value="weather">Weather</option>
+				</select>
 			</section>
 			<fieldset>
 				<legend>Auth</legend>
-				<label for="noAuth">None</label>
 				<input type="radio" name="auth" id="noAuth" value="null" />
-				<label for="apiKey">API key</label>
+				<label for="noAuth">None</label>
 				<input type="radio" name="auth" id="apiKey" value="apiKey" />
-				<label for="0Auth">0Auth</label>
+				<label for="apiKey">API key</label>
 				<input type="radio" name="auth" id="0Auth" value="0Auth" />
-				<label for="X-Mashape-Key">X-Mashape-Key</label>
+				<label for="0Auth">0Auth</label>
 				<input type="radio" name="auth" id="X-Mashape-Key" value="X-Mashape-Key" />
+				<label for="X-Mashape-Key">X-Mashape-Key</label>
 			</fieldset>
 			<fieldset>
 				<legend>HTTPS support</legend>
-				<label for="noHTTPS">No</label>
 				<input type="radio" name="https" id="noHTTPS" value="false" />
-				<label for="yesHTTPS">Yes</label>
+				<label for="noHTTPS">No</label>
 				<input type="radio" name="https" id="yesHTTPS" value="true" />
+				<label for="yesHTTPS">Yes</label>
 			</fieldset>
 			<fieldset>
 				<legend>CORS support</legend>
-				<label for="yesCORS">Yes</label>
 				<input type="radio" name="cors" id="yesCORS" value="yes" />
-				<label for="noCORS">No</label>
+				<label for="yesCORS">Yes</label>
 				<input type="radio" name="cors" id="noCORS" value="no" />
-				<label for="unknownCORS">Unknown</label>
+				<label for="noCORS">No (includes unknown options)</label>
 				<input type="radio" name="cors" id="unknownCORS" value="unknown" />
+				<label for="unknownCORS">Unknown</label>
 			</fieldset>
 			<button class="api-form__button" type="submit">Search</button>
 			<button class="api-form__button" type="button" id="randomBtn">Random</button>

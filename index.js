@@ -1,71 +1,25 @@
 const searchAPIURL = 'https://api.publicapis.org/entries';
 const randomAPIURL = 'https://api.publicapis.org/random';
 
-const categories = [
-	'Animals',
-	'Anime',
-	'Anti-Malware',
-	'Art & Design',
-	'Books',
-	'Business',
-	'Calendar',
-	'Cloud Storage & File Sharing',
-	'Continuous Integration',
-	'Cryptocurrency',
-	'Currency Exchange',
-	'Data Validation',
-	'Development',
-	'Dictionaries',
-	'Documents & Productivity',
-	'Environment',
-	'Events',
-	'Finance',
-	'Food & Drink',
-	'Games & Comics',
-	'Geocoding',
-	'Government',
-	'Health',
-	'Jobs',
-	'Machine Learning',
-	'Music',
-	'News',
-	'Open Data',
-	'Open Source Projects',
-	'Patent',
-	'Personality',
-	'Phone',
-	'Photography',
-	'Science & Math',
-	'Security',
-	'Shopping',
-	'Social',
-	'Sports & Fitness',
-	'Test Data',
-	'Text Analysis',
-	'Tracking',
-	'Transportation',
-	'URL Shorteners',
-	'Vehicle',
-	'Video',
-	'Weather',
-];
-
 const form = document.querySelector('form');
 const titleInput = document.querySelector('#titleInput');
 const inputs = document.querySelectorAll('input');
+const categorySelect = document.querySelector('select');
 const randomBtn = document.querySelector('#randomBtn');
 const apiOutputContainer = document.querySelector('.api-output-container');
 
 const chooseEndpointURL = (eventType) => (eventType === 'submit' ? searchAPIURL : randomAPIURL);
 
-const makeQueryString = () => {
-	return [...inputs].reduce((acc, input) => {
-		if (!input.name) {
+const createQueryString = () => {
+	const queryString = [...inputs].reduce((acc, input) => {
+		if (!input.name && input.value) {
 			return acc + `${input.id}=${input.value}&`;
 		} else if (input.checked) {
 			return acc + `${input.name}=${input.value}&`;
 		} else return acc;
-	}, '?');
+	}, '&');
+	console.log(queryString);
+	return categorySelect.value ? `?category=${categorySelect.value}` : '?' + queryString;
 };
 
 const clearOutput = () => {
@@ -116,8 +70,9 @@ const getAPI = async (e) => {
 	e.preventDefault();
 	clearOutput();
 	try {
-		const response = await fetch(chooseEndpointURL(e.type) + makeQueryString());
+		const response = await fetch(chooseEndpointURL(e.type) + createQueryString());
 		const parsedResponse = await response.json();
+		console.log(parsedResponse);
 		createAPIArticles(parsedResponse.entries);
 	} catch (err) {
 		const errorP = document.createElement('p');
