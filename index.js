@@ -19,7 +19,8 @@ const createQueryString = () => {
 		} else return acc;
 	}, '&');
 	console.log(queryString);
-	return categorySelect.value ? `?category=${categorySelect.value}` : '?' + queryString;
+	console.log((categorySelect.value ? `?category=${categorySelect.value}` : '?') + queryString);
+	return (categorySelect.value ? `?category=${categorySelect.value}` : '?') + queryString;
 };
 
 const clearOutput = () => {

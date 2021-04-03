@@ -1,0 +1,43 @@
+.api {
+	border: 1px solid black;
+	border-radius: 4px;
+	margin: 1rem;
+	padding: 1rem;
+
+	h3 {
+		margin: 0.5rem 0;
+	}
+
+	h4 {
+		margin: 0.3rem 0;
+	}
+
+	h5 {
+		margin: 0.2rem 0;
+	}
+
+	.api__stats {
+		display: flex;
+		flex-wrap: wrap;
+		p {
+			width: 50%;
+			margin: 0.5rem 0;
+		}
+	}
+}
+
+@media (min-width: 499.98px) {
+	.api {
+		.api__stats {
+			p {
+				width: 33%;
+			}
+		}
+	}
+}
+
+@media (min-width: 767.98px) {
+	.api {
+		width: 45%;
+	}
+}

@@ -13,6 +13,7 @@
 			<img src="assets/xzibit.jpeg" alt="xzibit" />
 		</header>
 		<form class="api-form">
+			<h2>Search for Public APIs</h2>
 			<section class="api-form__input-wrapper">
 				<label for="title">Title</label>
 				<input type="text" id="title" />
@@ -117,9 +118,13 @@
 					<label for="unknownCORS">Unknown</label>
 				</section>
 			</fieldset>
-			<section class="api-form__button-wrapper">
-				<button class="api-form__button" type="submit">Search</button>
-				<button class="api-form__button" type="button" id="randomBtn">Random</button>
+			<section class="api-form__buttons">
+				<p>Search or find a random API, both based on the above critera:</p>
+				<p>(Leave all fields blank to generate a completely random API)</p>
+				<section class="api-form__button-wrapper">
+					<button class="api-form__button" type="submit">Search</button>
+					<button class="api-form__button" type="button" id="randomBtn">Random</button>
+				</section>
 			</section>
 		</form>
 		<section class="api-output-container"></section>

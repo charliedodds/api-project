@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
 }
 
 header h1 {
@@ -17,8 +18,8 @@ header h1 {
   text-align: center;
 }
 
-form {
-  font-size: 1.6rem;
+form h2 {
+  text-align: center;
 }
 form input,
 form select,
@@ -26,6 +27,34 @@ form fieldset,
 form button {
   font-size: inherit;
   font-family: inherit;
+}
+form .api-form__buttons {
+  text-align: center;
+}
+
+.api-output-container .error {
+  text-align: center;
+  color: red;
+}
+.api-output-container .api h3 {
+  font-size: 2.2rem;
+}
+.api-output-container .api h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.api-output-container .api h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.api-output-container .api .api__stats {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
 }
 
 header h1 {
@@ -37,6 +66,10 @@ header img {
   width: 80%;
 }
 
+form {
+  max-width: 600px;
+  margin: auto;
+}
 form label,
 form legend {
   margin-bottom: 0.5rem;
@@ -61,24 +94,71 @@ form fieldset {
 form fieldset .api-form__radio-wrapper {
   margin: 0.25rem 0.75rem;
 }
-form .api-form__button-wrapper {
+form .api-form__buttons p {
+  margin: 0.5rem 0;
+}
+form .api-form__buttons .api-form__button-wrapper {
   display: flex;
   justify-content: space-evenly;
+  margin: 2rem 0;
 }
 
-.api {
-  margin: 1rem;
-}
-
-.api__stats {
-  display: flex;
-  justify-content: space-between;
+button {
+  cursor: pointer;
 }
 
 form button {
   padding: 1rem 1.5rem;
   border-radius: 2rem;
   border: 1px solid black;
+}
+
+.api-output-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 767.98px) {
+  .api-output-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+.api {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 1rem;
+  padding: 1rem;
+}
+.api h3 {
+  margin: 0.5rem 0;
+}
+.api h4 {
+  margin: 0.3rem 0;
+}
+.api h5 {
+  margin: 0.2rem 0;
+}
+.api .api__stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+.api .api__stats p {
+  width: 50%;
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 499.98px) {
+  .api .api__stats p {
+    width: 33%;
+  }
+}
+@media (min-width: 767.98px) {
+  .api {
+    width: 45%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

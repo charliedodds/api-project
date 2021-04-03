@@ -1,0 +1,13 @@
+.api-output-container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 767.98px) {
+	.api-output-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+}

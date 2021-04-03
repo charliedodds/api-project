@@ -1,5 +1,6 @@
 body {
 	font-family: $primary-font-stack;
+	font-size: 1.6rem;
 }
 
 header {
@@ -10,7 +11,9 @@ header {
 }
 
 form {
-	font-size: 1.6rem;
+	h2 {
+		text-align: center;
+	}
 
 	input,
 	select,
@@ -18,5 +21,34 @@ form {
 	button {
 		font-size: inherit;
 		font-family: inherit;
+	}
+
+	.api-form__buttons {
+		text-align: center;
+	}
+}
+
+.api-output-container {
+	.error {
+		text-align: center;
+		color: red;
+	}
+
+	.api {
+		h3 {
+			font-size: 2.2rem;
+		}
+		h4 {
+			font-size: 1.8rem;
+			font-weight: 500;
+		}
+		h5 {
+			font-size: 1.5rem;
+			font-weight: 400;
+		}
+		.api__stats {
+			font-size: 1.4rem;
+			font-weight: 300;
+		}
 	}
 }
