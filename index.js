@@ -18,8 +18,6 @@ const createQueryString = () => {
 			return acc + `${input.name}=${input.value}&`;
 		} else return acc;
 	}, '&');
-	console.log(queryString);
-	console.log((categorySelect.value ? `?category=${categorySelect.value}` : '?') + queryString);
 	return (categorySelect.value ? `?category=${categorySelect.value}` : '?') + queryString;
 };
 
@@ -67,14 +65,18 @@ const createAPIArticles = (apis) => {
 	apis.forEach((api) => createAPIArticle(api));
 };
 
+const scrollToAPIs = () => {
+	apiOutputContainer.scrollIntoView();
+};
+
 const getAPI = async (e) => {
 	e.preventDefault();
 	clearOutput();
 	try {
 		const response = await fetch(chooseEndpointURL(e.type) + createQueryString());
 		const parsedResponse = await response.json();
-		console.log(parsedResponse);
 		createAPIArticles(parsedResponse.entries);
+		scrollToAPIs();
 	} catch (err) {
 		const errorP = document.createElement('p');
 		errorP.classList.add('error');
