@@ -1,0 +1,22 @@
+body {
+	font-family: $primary-font-stack;
+}
+
+header {
+	h1 {
+		font-size: 3rem;
+		text-align: center;
+	}
+}
+
+form {
+	font-size: 1.6rem;
+
+	input,
+	select,
+	fieldset,
+	button {
+		font-size: inherit;
+		font-family: inherit;
+	}
+}

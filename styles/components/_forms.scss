@@ -1,0 +1,35 @@
+form {
+	label,
+	legend {
+		margin-bottom: 0.5rem;
+	}
+
+	input,
+	select,
+	fieldset {
+		padding: 0.5rem;
+	}
+
+	fieldset,
+	.api-form__input-wrapper {
+		margin: 1rem;
+	}
+
+	.api-form__input-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	fieldset {
+		display: flex;
+		flex-wrap: wrap;
+		.api-form__radio-wrapper {
+			margin: 0.25rem 0.75rem;
+		}
+	}
+
+	.api-form__button-wrapper {
+		display: flex;
+		justify-content: space-evenly;
+	}
+}

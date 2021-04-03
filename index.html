@@ -5,14 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>API Project</title>
-		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="styles/index.css" />
 	</head>
 	<body>
 		<header>
 			<h1>API Project</h1>
-			<figure>
-				<img src="xzibit.jpeg" alt="xzibit" />
-			</figure>
+			<img src="assets/xzibit.jpeg" alt="xzibit" />
 		</header>
 		<form class="api-form">
 			<section class="api-form__input-wrapper">
@@ -76,33 +74,53 @@
 			</section>
 			<fieldset>
 				<legend>Auth</legend>
-				<input type="radio" name="auth" id="noAuth" value="null" />
-				<label for="noAuth">None</label>
-				<input type="radio" name="auth" id="apiKey" value="apiKey" />
-				<label for="apiKey">API key</label>
-				<input type="radio" name="auth" id="0Auth" value="0Auth" />
-				<label for="0Auth">0Auth</label>
-				<input type="radio" name="auth" id="X-Mashape-Key" value="X-Mashape-Key" />
-				<label for="X-Mashape-Key">X-Mashape-Key</label>
+				<section class="api-form__radio-wrapper">
+					<input type="radio" name="auth" id="noAuth" value="null" />
+					<label for="noAuth">None</label>
+				</section>
+				<section class="api-form__radio-wrapper">
+					<input type="radio" name="auth" id="apiKey" value="apiKey" />
+					<label for="apiKey">API key</label>
+				</section>
+				<section class="api-form__radio-wrapper">
+					<input type="radio" name="auth" id="0Auth" value="0Auth" />
+					<label for="0Auth">0Auth</label>
+				</section>
+				<section class="api-form__radio-wrapper">
+					<input type="radio" name="auth" id="X-Mashape-Key" value="X-Mashape-Key" />
+					<label for="X-Mashape-Key">X-Mashape-Key</label>
+				</section>
 			</fieldset>
 			<fieldset>
 				<legend>HTTPS support</legend>
-				<input type="radio" name="https" id="noHTTPS" value="false" />
-				<label for="noHTTPS">No</label>
-				<input type="radio" name="https" id="yesHTTPS" value="true" />
-				<label for="yesHTTPS">Yes</label>
+				<section class="api-form__radio-wrapper">
+					<input type="radio" name="https" id="noHTTPS" value="false" />
+					<label for="noHTTPS">No</label>
+				</section>
+				<section class="api-form__radio-wrapper">
+					<input type="radio" name="https" id="yesHTTPS" value="true" />
+					<label for="yesHTTPS">Yes</label>
+				</section>
 			</fieldset>
 			<fieldset>
 				<legend>CORS support</legend>
-				<input type="radio" name="cors" id="yesCORS" value="yes" />
-				<label for="yesCORS">Yes</label>
-				<input type="radio" name="cors" id="noCORS" value="no" />
-				<label for="noCORS">No (includes unknown options)</label>
-				<input type="radio" name="cors" id="unknownCORS" value="unknown" />
-				<label for="unknownCORS">Unknown</label>
+				<section class="api-form__radio-wrapper">
+					<input type="radio" name="cors" id="yesCORS" value="yes" />
+					<label for="yesCORS">Yes</label>
+				</section>
+				<section class="api-form__radio-wrapper">
+					<input type="radio" name="cors" id="noCORS" value="no" />
+					<label for="noCORS">No (includes unknown options)</label>
+				</section>
+				<section class="api-form__radio-wrapper">
+					<input type="radio" name="cors" id="unknownCORS" value="unknown" />
+					<label for="unknownCORS">Unknown</label>
+				</section>
 			</fieldset>
-			<button class="api-form__button" type="submit">Search</button>
-			<button class="api-form__button" type="button" id="randomBtn">Random</button>
+			<section class="api-form__button-wrapper">
+				<button class="api-form__button" type="submit">Search</button>
+				<button class="api-form__button" type="button" id="randomBtn">Random</button>
+			</section>
 		</form>
 		<section class="api-output-container"></section>
 		<script src="index.js"></script>
