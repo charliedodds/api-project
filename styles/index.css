@@ -21,15 +21,19 @@ header h1 {
 form h2 {
   text-align: center;
 }
+form p {
+  text-align: center;
+}
+form p a {
+  text-decoration: underline;
+  color: inherit;
+}
 form input,
 form select,
 form fieldset,
 form button {
   font-size: inherit;
   font-family: inherit;
-}
-form .api-form__buttons {
-  text-align: center;
 }
 
 .api-output-container .error {
@@ -70,6 +74,9 @@ form {
   max-width: 600px;
   margin: auto;
 }
+form p {
+  margin: 0.5rem 0;
+}
 form label,
 form legend {
   margin-bottom: 0.5rem;
@@ -94,9 +101,6 @@ form fieldset {
 form fieldset .api-form__radio-wrapper {
   margin: 0.25rem 0.75rem;
 }
-form .api-form__buttons p {
-  margin: 0.5rem 0;
-}
 form .api-form__buttons .api-form__button-wrapper {
   display: flex;
   justify-content: space-evenly;
@@ -111,6 +115,7 @@ form button {
   padding: 1rem 1.5rem;
   border-radius: 2rem;
   border: 1px solid black;
+  background-color: #efefef;
 }
 
 .api-output-container {

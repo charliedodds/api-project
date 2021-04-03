@@ -2,6 +2,10 @@ form {
 	max-width: 600px;
 	margin: auto;
 
+	p {
+		margin: 0.5rem 0;
+	}
+
 	label,
 	legend {
 		margin-bottom: 0.5rem;
@@ -32,10 +36,6 @@ form {
 	}
 
 	.api-form__buttons {
-		p {
-			margin: 0.5rem 0;
-		}
-
 		.api-form__button-wrapper {
 			display: flex;
 			justify-content: space-evenly;
